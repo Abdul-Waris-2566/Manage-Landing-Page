@@ -1,0 +1,95 @@
+.header {
+  max-width: 111rem;
+  margin-inline: auto;
+  padding: 5rem 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-intro {
+  max-width: 111rem;
+  margin-inline: auto;
+  padding: 3rem;
+  @include respond(medium) {
+    max-width: 65rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.section-about {
+  max-width: 111rem;
+
+  padding: 5rem 3rem;
+  margin: 5rem 0;
+  margin-inline: auto;
+
+  @include respond(medium) {
+    max-width: 65rem;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    margin-block-start: 12rem;
+    margin-inline: auto;
+  }
+}
+
+.section-testimonial {
+  width: 100%;
+
+  text-align: center;
+  margin-bottom: 13rem;
+  @include respond(medium) {
+    margin-bottom: 4rem;
+  }
+}
+
+.section-simplify {
+  width: 100%;
+  margin-inline: auto;
+  align-items: flex-start;
+  padding: 7rem 13rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+
+  @media only screen and (max-width: 68em) {
+    padding: 5rem;
+  }
+  @include respond(tab-port) {
+    padding: 5rem 3rem;
+  }
+  @include respond(medium) {
+    padding: 10rem 2.5rem;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+
+    .heading-secondary {
+      font-size: 4.2rem;
+      max-width: 20ch;
+    }
+  }
+
+  &::before {
+    content: "";
+    background-color: $color-Bright-Red;
+    position: absolute;
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+    inset: 0;
+    background-position: 30rem -15rem;
+    background-repeat: no-repeat;
+    z-index: -3;
+    @include respond(medium) {
+      background-position: -35rem -0rem;
+    }
+    @include respond(phone-small) {
+      background-image: url(./images/bg-simplify-section-mobile.svg);
+      background-position: 0rem 5rem;
+    }
+  }
+}

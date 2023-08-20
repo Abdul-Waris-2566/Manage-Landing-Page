@@ -1,0 +1,69 @@
+//####################################3
+// COLORS
+
+$color-Bright-Red: hsl(12, 88%, 59%);
+$color-Dark-Blue-1: hsl(233, 12%, 13%);
+$color-Dark-Blue-2: hsl(228, 39%, 23%);
+$color-Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$color-Very-Pale-Red: hsl(13, 100%, 96%);
+$color-Vary-Light-Gray: hsl(0, 0%, 98%);
+
+//####################################3
+// Utility classes
+
+.margin-bottom--1 {
+  margin-bottom: 1rem !important ;
+}
+.margin-bottom--2 {
+  margin-bottom: 2rem !important;
+}
+.margin-bottom--3 {
+  margin-bottom: 3rem !important;
+}
+.margin-bottom--4 {
+  margin-bottom: 4rem !important;
+}
+.margin-bottom--5 {
+  margin-bottom: 5rem !important;
+}
+.margin-bottom--6 {
+  margin-bottom: 6rem !important;
+}
+.margin-bottom--7 {
+  margin-bottom: 7rem !important;
+}
+.margin-bottom--10 {
+  margin-bottom: 10rem !important;
+}
+
+.wide {
+  max-width: 32ch;
+  @include respond(medium) {
+    max-width: 100%;
+  }
+  @include respond(phone-small) {
+    padding: 0 3rem;
+  }
+}
+
+.narrow {
+  max-width: 42ch;
+
+  @include respond(medium) {
+    max-width: 100%;
+  }
+}
+
+// animations
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(150%);
+  }
+  75% {
+    transform: translateX(-65%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
